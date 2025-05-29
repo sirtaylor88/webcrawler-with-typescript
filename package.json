@@ -1,0 +1,38 @@
+{
+  "name": "webcrawler-with-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/sirtaylor88/webcrawler-with-typescript#readme",
+  "bugs": {
+    "url": "https://github.com/sirtaylor88/webcrawler-with-typescript/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirtaylor88/webcrawler-with-typescript.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "rm -rf dist && npx tsc && node dist/main.js",
+    "lint": "npx eslint src",
+    "start": "node dist/main.js",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.15.24",
+    "eslint": "^9.27.0",
+    "globals": "^16.2.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.33.0",
+    "vitest": "^3.1.4"
+  },
+  "dependencies": {
+    "jsdom": "^26.1.0"
+  }
+}
