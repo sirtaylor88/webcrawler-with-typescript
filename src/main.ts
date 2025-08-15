@@ -1,6 +1,6 @@
-import { crawlPage} from "./crawl.js";
 import { argv, exit } from 'node:process';
 import { printReport } from "./report.js";
+import { crawlSiteAsync } from './crawl.js';
 
 async function main() {
     if (argv.length < 3) {
@@ -14,8 +14,7 @@ async function main() {
     }
 
     const baseURL = argv[2];
-    const pages: Record<string, number> = {}
-    await crawlPage(baseURL, baseURL, pages);
+    const pages = await crawlSiteAsync(baseURL, 1);
     printReport(baseURL, pages);
     exit(0);
 }
